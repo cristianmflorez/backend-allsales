@@ -6,23 +6,14 @@ const { logErrors, errorHandler, boomErrorHandler, ormErrorHandler } = require('
 
 const app = express();
 
-// CORS headers on Host
+// CORS headers on External
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://192.0.2.2')
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PATCH, PUT, DELETE, OPTIONS')
-    res.setHeader('Access-Control-Allow-Credentials', true, )
-    res.setHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization");
-    next()
-  })
-  
-  // CORS headers on External
-  app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000')
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PATCH, PUT, DELETE, OPTIONS')
-    res.setHeader('Access-Control-Allow-Credentials', true, )
-    res.setHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization");
-    next()
-  })
+  res.setHeader('Access-Control-Allow-Origin', 'https://frontend-allsales.vercel.app')
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PATCH, PUT, DELETE, OPTIONS')
+  res.setHeader('Access-Control-Allow-Credentials', true, )
+  res.setHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization");
+  next()
+})
 
 app.use(express.static(path.resolve(__dirname, './images')));
 app.use(cookies());
