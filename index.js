@@ -32,3 +32,7 @@ app.use(errorHandler)
 app.listen(port, () => {
     console.log('Mi port' +  port);
 });
+
+app.get('/', (req, res) => {
+  res.send('API running 🥳')
+})
