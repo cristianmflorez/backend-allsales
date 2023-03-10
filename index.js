@@ -6,6 +6,9 @@ const { logErrors, errorHandler, boomErrorHandler, ormErrorHandler } = require('
 
 const app = express();
 
+const cors = require('cors');
+app.use(cors());
+
 // CORS headers on External
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'https://frontend-allsales.vercel.app')
