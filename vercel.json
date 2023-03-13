@@ -13,7 +13,7 @@
         }
     ],
     "functions": {
-        "middleware/multerUser.handler.js": {
+        "api/test.js": {
           "includeFiles": "templates/**"
         }
       }
