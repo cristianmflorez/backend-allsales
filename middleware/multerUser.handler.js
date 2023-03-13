@@ -4,7 +4,9 @@ const fs = require('fs');
 
 const storage = multer.diskStorage({
 	destination: function (req, file, cb) {
-		cb(null, '');
+		fs.mkdir('/tmp/users',(err)=>{
+			cb(null, '/tmp/users');
+		 });
 	},
 	filename: function (req, file, cb) {
 		cb(null, `${file.fieldname}_${Date.now()}_${path.extname(file.originalname)}`);
