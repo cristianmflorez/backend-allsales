@@ -8,7 +8,8 @@
     ],
     "headers": [
     {
-      "source": "/api/(.*)",
+      "src": "/(.*)",
+      "dest": "/",
       "headers": [
         { "key": "Access-Control-Allow-Credentials", "value": "true" },
         { "key": "Access-Control-Allow-Origin", "value": "https://frontend-allsales.vercel.app" },
