@@ -34,5 +34,5 @@ app.listen(port, () => {
 });
 
 app.get('/', (req, res) => {
-  res.send('API running')
+  res.send(window.location)
 })
