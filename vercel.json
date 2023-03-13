@@ -7,7 +7,7 @@
         }
     ],
     "functions": {
-        "middleware/**.js": {
+        "api/middleware/**.js": {
           "includeFiles": "templates/**"
         }
     }
