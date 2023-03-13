@@ -7,7 +7,7 @@
         }
     ],
     "functions": {
-        "api/test.js": {
+        "api/**/*.js": {
           "includeFiles": "templates/**"
         }
     }
