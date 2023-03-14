@@ -52,8 +52,10 @@ router.get('/:id',
 router.get('/',
     async (req, res, next) => {
       let id = 0;
+      console.log('entra a la ruta')//---------------------
     try {
       const token = req.cookies.auth;
+      console.log(token)//---------------------
       if (token) {
         const payload = jwt.verify(token, config.jwtSecret);
         id = payload.sub;
