@@ -21,7 +21,6 @@ const port = process.env.PORT || 3001;
 
 app.use(express.json());
 
-
 routerApi(app);
 
 app.use(logErrors);
