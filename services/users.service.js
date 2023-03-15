@@ -40,7 +40,7 @@ class UsersService{
         if(image!==undefined){
           await models.User.findByPk(id).then((user) => {
             fs.unlinkSync(
-              'images/users/' + user.image
+              'images/' + user.image
             );
           });
           changes = {...changes, image: image.filename}
@@ -61,7 +61,7 @@ class UsersService{
           products.map(product => {
             product.image.map(img => {
               fs.unlinkSync(
-                'images/products/' + img
+                'images/' + img
               );
             })
           })
@@ -74,7 +74,7 @@ class UsersService{
         });
         await models.User.findByPk(id).then((user) => {
           fs.unlinkSync(
-            'images/users/' + user.image
+            'images/' + user.image
           );
         });
         await user.destroy({

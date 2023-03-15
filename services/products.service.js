@@ -38,7 +38,7 @@ class ProductsService{
         await models.Product.findByPk(id).then((producto) => {
           producto.image.map(img => {
             fs.unlinkSync(
-              'images/products/' + img
+              'images/' + img
             );
           })
         });
@@ -57,7 +57,7 @@ class ProductsService{
         await models.Product.findByPk(id).then((producto) => {
           producto.image.map(img => {
             fs.unlinkSync(
-              'images/products/' + img
+              'images/' + img
             );
           })
         });
