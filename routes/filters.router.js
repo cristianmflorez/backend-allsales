@@ -9,7 +9,6 @@ router.get('/category/:id',
     try {
       const { id } = req.params;
       const rta = await service.filterCategory(id);
-      console.log(rta)
       res.json(rta);
     } catch (error) {
       next(error);

@@ -61,6 +61,9 @@ class ProductsService{
             );
           })
         });
+        await models.Coment.destroy({
+          where: {productId: id}
+        })
         await product.destroy({
           where:{id}
         });

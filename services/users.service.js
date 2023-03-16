@@ -69,6 +69,15 @@ class UsersService{
         await models.Coment.destroy({
           where: {userId: id}
         });
+        await models.Product.findAll({
+          where: {userId: id}
+        }).then((products) => {
+          products.map(async (product) => {
+            await models.Coment.destroy({
+              where: {productId: product.id}
+            });
+          })
+        });
         await models.Product.destroy({
           where: {userId: id}
         });
