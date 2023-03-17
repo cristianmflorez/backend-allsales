@@ -34,15 +34,6 @@ class ProductsService{
       const product = await models.Product.findByPk(id);
 
       if(arrImages.length>0){
-
-        await models.Product.findByPk(id).then((producto) => {
-          producto.image.map(img => {
-            fs.unlinkSync(
-              'images/' + img
-            );
-          })
-        });
-
         changes = {...changes, image:arrImages};
       }
       
@@ -54,13 +45,6 @@ class ProductsService{
 
     async delete(id) {
         const product = await models.Product.findByPk(id);
-        await models.Product.findByPk(id).then((producto) => {
-          producto.image.map(img => {
-            fs.unlinkSync(
-              'images/' + img
-            );
-          })
-        });
         await models.Coment.destroy({
           where: {productId: id}
         })

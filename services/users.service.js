@@ -38,11 +38,6 @@ class UsersService{
         const user = await models.User.findByPk(id);
 
         if(image!==undefined){
-          await models.User.findByPk(id).then((user) => {
-            fs.unlinkSync(
-              'images/' + user.image
-            );
-          });
           changes = {...changes, image: image.filename}
         }
 
@@ -55,17 +50,6 @@ class UsersService{
 
     async delete(id) {
         const user = await models.User.findByPk(id);
-        await models.Product.findAll({
-          where: {userId: id}
-        }).then((products) => {
-          products.map(product => {
-            product.image.map(img => {
-              fs.unlinkSync(
-                'images/' + img
-              );
-            })
-          })
-        });
         await models.Coment.destroy({
           where: {userId: id}
         });
@@ -80,11 +64,6 @@ class UsersService{
         });
         await models.Product.destroy({
           where: {userId: id}
-        });
-        await models.User.findByPk(id).then((user) => {
-          fs.unlinkSync(
-            'images/' + user.image
-          );
         });
         await user.destroy({
           where:{id}
