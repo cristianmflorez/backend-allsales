@@ -31,7 +31,7 @@ class FiltersService{
 
     async search(name) {
         const products = await models.Product.findAll({
-            where: {name: { [Op.like]: '%' + name + '%' } }
+            where: {name: { [Op.iLike]: '%' + name + '%' } }
         });
         if(!products){
           throw boom.notFound('Busqueda sin resultados');
