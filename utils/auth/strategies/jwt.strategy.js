@@ -11,13 +11,3 @@ const JwtStrategy = new Strategy(options, (payload, done) => {
 });
 
 module.exports = JwtStrategy;
-
-/*
-DEL LADO DEL CLIENTE
-
-guardar un estado de login y el token
-puede ser en cookies o localStorage (mejor cookies)
-interceptando la peticion y enviando el token en los header (consultar)
-que el token expire (refresh token)
-
-*/
