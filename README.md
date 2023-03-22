@@ -15,7 +15,7 @@ En la aplicación está configurado el Intercambio de Recursos de Origen Cruzado
 Se implementa la librería Joi, consolidando esquemas que actúan dentro de un middleware, para asegurarse que la información que llega en las solicitudes desde el lado del cliente sea la esperada y poder cumplir con cada servicio.
 
 ## Base de datos
-La información de los usuarios y productos se encuentra almacenada en una base de datos de tipo Postgres, desplegada en el servicio de Alwaysdata bajo el concepto de migraciones; de la mano con esto, en el proyecto se implementa el ORM Sequelize para la manipulación de la BD
+La información de los usuarios y productos se encuentra almacenada en una base de datos de tipo PostgreSQL, desplegada en el servicio de Alwaysdata bajo el concepto de migraciones; de la mano con esto, en el proyecto se implementa el ORM Sequelize para la manipulación de la BD
 
 ## Gestión de archivos
 Se implementa la librería multer para el procesamiento de las imágenes de usuarios y productos, luego de validar sus formatos y peso.
