@@ -21,4 +21,4 @@ La información de los usuarios y productos se encuentra almacenada en una base 
 Se implementa la librería multer para el procesamiento de las imágenes de usuarios y productos, luego de validar sus formatos y peso.
 
 ## Deploy
-El proyecto está desplegado en el servicio de Cyclic, mientras el frontend se encuentra en la plataforma Vercel.
+El proyecto está desplegado en el servicio de Railway, mientras el frontend se encuentra en la plataforma Vercel.
