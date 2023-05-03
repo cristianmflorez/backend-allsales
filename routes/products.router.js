@@ -13,9 +13,6 @@ const uploadFile = require('./../middleware/multerProduct.handler');
 const router = express.Router();
 const service = new ProductsService();
 
-_.docu
-
-
 router.post('/',
   uploadFile.array('image'),
   isLogin,
