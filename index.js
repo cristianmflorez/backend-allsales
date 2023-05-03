@@ -3,6 +3,7 @@ const path = require('path');
 const routerApi = require('./routes');
 const cookies = require('cookie-parser');
 const { logErrors, errorHandler, boomErrorHandler, ormErrorHandler } = require('./middleware/error.handler');
+const { argv } = require('process');
 
 const app = express();
   
